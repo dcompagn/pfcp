@@ -336,7 +336,7 @@ type PFCPSessionEstablishmentResponse struct {
 	Cause                      *pfcpType.Cause             `tlv:"19"`
 	OffendingIE                *pfcpType.OffendingIE       `tlv:"40"`
 	UPFSEID                    *pfcpType.FSEID             `tlv:"57"`
-	CreatedPDR                 *CreatedPDR                 `tlv:"8"`
+	CreatedPDR                 []*CreatedPDR               `tlv:"8"`
 	LoadControlInformation     *LoadControlInformation     `tlv:"51"`
 	OverloadControlInformation *OverloadControlInformation `tlv:"54"`
 	SGWUFQCSID                 *pfcpType.FQCSID            `tlv:"65"`
@@ -526,7 +526,7 @@ type RemoveTrafficEndpoint struct {
 type PFCPSessionModificationResponse struct {
 	Cause                             *pfcpType.Cause                               `tlv:"19"`
 	OffendingIE                       *pfcpType.OffendingIE                         `tlv:"40"`
-	CreatedPDR                        *CreatedPDR                                   `tlv:"8"`
+	CreatedPDR                        []*CreatedPDR                                 `tlv:"8"`
 	LoadControlInformation            *LoadControlInformation                       `tlv:"51"`
 	OverloadControlInformation        *OverloadControlInformation                   `tlv:"54"`
 	UsageReport                       []*UsageReportPFCPSessionModificationResponse `tlv:"78"`
